@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bgMoon</title>
+  <link href="images/bg-icon.ico" rel="shortcut icon" type="image-x/png">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="bgmoon">
+    <div class="load" id="load"></div>
+    <div class="ready" id="ready"></div>
+  </div><!--bgmoon-->
+
+  <div class="content" id="content">
+    <div class="center">
+      <header>
+        <div class="logo">
+          <a href="#"><img src="../images/bg-logo.png" /></a>
+        </div><!--logo-->
+      </header>
+    
+      <section class="register">
+        <div class="form-acess">
+          <h2>Crie sua conta</h2>
+    
+        <form action=""  target="_blank" onsubmit="return checkForm()">
+          <div class="input-wrapper">
+            <label>Nome</label>
+            <input type="text" id="firstname" placeholder="Digite seu nome" />
+          </div>
+    
+          <div class="input-wrapper">
+            <label>Sobrenome</label>
+            <input type="text" id="lastname" placeholder="Digite seu sobrenome" />
+          </div>
+    
+          <div class="input-wrapper">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" />
+          </div>
+    
+          <div class="input-wrapper">
+            <label>Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" />
+          </div>
+    
+          <div class="input-wrapper">
+            <p>Ao criar uma conta, você declara que está de acordo com os <span>Termos de Uso</span> & <span>Política de Privacidade.</span></p>
+          </div>
+    
+          <div class="input-submit">
+            <input type="submit" name="submit" value="Entrar" />
+          </div>
+    
+          <div class="input-wrapper">
+            <p>Já possui uma conta?</p>
+            <a href="#">Entre agora</a>
+          </div>
+        </form>
+        </div>
+      </section><!--register-->
+    </div><!--center-->
+  </div><!--content-->
+  
+  <script src="js/index.js"></script>
+  <script src="js/acess.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+  height :100%;
+}
+
+
+/***************/ /***** BGMOON *****/ /***************/
+.bgmoon {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #363636;
+  z-index: -1;
+}
+
+.load {
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/bg-loading.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: is-loading 1.2s infinite;
+}
+  @keyframes is-loading {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.ready {
+  display: none;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/bg-moon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: is-ready 3s;
+}
+  @keyframes is-ready {
+    0% {background-image: url('../images/bg-loading.png')}
+    25% {transform: rotate(360deg) scale(0, 0);}
+    50% { background-image: url('../images/bg-moon.png')}
+    75% { transform: rotate(720deg) scale(5, 5); opacity: 1;}
+    100% { transform: scale(4, 4); opacity:0.5;}
+  }
+
+/***************/ /***** CONTENT *****/ /***************/
+.content {
+  opacity: 0;
+  transition: 1s;
+}
+
+.center {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/***************/ /***** HEADER *****/ /***************/
+header {
+  margin: 0 auto;
+  border-bottom: 2px solid #ccc;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 20px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/***************/ /***** LOGIN *****/ /***************/
+.form-acess {
+  width: 500px;
+  margin: 40px auto;
+}
+
+.form-acess h2 {
+  color: white;
+  line-height: 80px;
+  font-size: 40px;
+}
+
+.input-wrapper {
+  margin-bottom: 20px;
+}
+
+.form-acess label {
+  display: block;
+  color: white;
+  line-height: 30px;
+}
+
+.form-acess input[type="text"],
+.form-acess input[type="email"],
+.form-acess input[type="password"] {
+  width: 100%;
+  line-height: 40px;
+  border: 2px solid #ccc;
+  outline: 0;
+  border-radius: 8px;
+  background-color: #c5c5c5;
+  padding-left: 10px;
+  transition: 0.5s;
+}
+.form-acess input[type="text"]:hover,
+.form-acess input[type="email"]:hover,
+.form-acess input[type="password"]:hover {
+    border: 2px solid #000;
+  }
+  .form-acess input[type="text"]:focus,
+  .form-acess input[type="email"]:focus,
+  .form-acess input[type="password"]:focus {
+    border: 2px solid #000;
+  }
+
+.form-acess input[type="submit"] {
+  color: white;
+  background-color: #1b88c7;
+  height: 40px;
+  padding: 0 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.form-acess input[type="submit"]:hover {
+    background-color: #aaa;
+  }
+
+.input-submit {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-submit a{
+  color: #ccc;
+  text-decoration: none;
+}
+  .input-submit a:hover {
+    color: white;
+  }
+
+.form-acess p {
+  color: #ccc;
+}
+
+.form-acess span {
+  color: #1b88c7;
+  cursor: pointer;
+}
+  .form-acess span:hover {
+    text-decoration: underline;
+  }
+
+.form-acess a {
+  color: white;
+  text-decoration: none;
+}
+.form-acess form > a:hover {
+    text-decoration: underline;
+  }
+
+  .input-wrapper:last-child {
+    padding-bottom: 20px;
+  }
+
+@media screen and (max-width: 560px) {
+  .logo {
+    margin: 0 auto;
+  }
+
+  .form-acess {
+    width: 90%;
+  }
+}
